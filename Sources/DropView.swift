@@ -29,7 +29,7 @@ internal final class DropView: UIView {
     self.drop = drop
     super.init(frame: .zero)
 
-    backgroundColor = .secondarySystemBackground
+    backgroundColor = self.drop.backgroundColor
 
     addSubview(stackView)
 
@@ -105,10 +105,12 @@ internal final class DropView: UIView {
 
     titleLabel.text = drop.title
     titleLabel.numberOfLines = drop.titleNumberOfLines
+    titleLabel.color = drop.foregroundColor
 
     subtitleLabel.text = drop.subtitle
     subtitleLabel.numberOfLines = drop.subtitleNumberOfLines
     subtitleLabel.isHidden = drop.subtitle == nil
+    subtitleLabel.color = drop.foregroundColor
 
     imageView.image = drop.icon
     imageView.isHidden = drop.icon == nil
