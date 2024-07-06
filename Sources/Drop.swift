@@ -50,8 +50,8 @@ public struct Drop: ExpressibleByStringLiteral {
     position: Position = .top,
     duration: Duration = .recommended,
     accessibility: Accessibility? = nil,
-    backgroundColor: Color = .secondarySystemBackground,
-    foregroundColor: Color = .black
+    backgroundColor: UIColor = UIColor.secondaryLabel,
+    foregroundColor: UIColor = UIColor.black
   ) {
     self.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
     self.titleNumberOfLines = titleNumberOfLines
@@ -108,10 +108,10 @@ public struct Drop: ExpressibleByStringLiteral {
   public var accessibility: Accessibility
 
   /// Background color
-  public var backgroundColor: Color
+  public var backgroundColor: UIColor
 
   /// Foreground color
-  public var foregroundColor: Color
+  public var foregroundColor: UIColor
 }
 
 public extension Drop {
