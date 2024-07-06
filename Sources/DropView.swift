@@ -155,7 +155,7 @@ internal final class DropView: UIView {
     label.textAlignment = .center
     label.textColor = UIAccessibility.isDarkerSystemColorsEnabled ? .label : .secondaryLabel
     //label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-    label.font = label.font.withSize(14.0)
+    label.font = label.font.withSize(12.0)
     label.adjustsFontForContentSizeCategory = true
     label.adjustsFontSizeToFitWidth = true
     return label
