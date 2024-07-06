@@ -50,7 +50,7 @@ public struct Drop: ExpressibleByStringLiteral {
     position: Position = .top,
     duration: Duration = .recommended,
     accessibility: Accessibility? = nil,
-    backgroundColor: Color = .secondarySystemBackground
+    backgroundColor: Color = .secondarySystemBackground,
     foregroundColor: Color = .black
   ) {
     self.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
