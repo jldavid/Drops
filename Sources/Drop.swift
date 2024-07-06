@@ -49,9 +49,9 @@ public struct Drop: ExpressibleByStringLiteral {
     action: Action? = nil,
     position: Position = .top,
     duration: Duration = .recommended,
-    accessibility: Accessibility? = nil,
     backgroundColor: UIColor = UIColor.secondaryLabel,
-    foregroundColor: UIColor = UIColor.black
+    foregroundColor: UIColor = UIColor.black,
+    accessibility: Accessibility? = nil
   ) {
     self.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
     self.titleNumberOfLines = titleNumberOfLines
@@ -63,9 +63,9 @@ public struct Drop: ExpressibleByStringLiteral {
     self.action = action
     self.position = position
     self.duration = duration
-    self.accessibility = accessibility
     self.backgroundColor = backgroundColor
     self.foregroundColor = foregroundColor
+    self.accessibility = accessibility
     ?? .init(message: [title, subtitle].compactMap { $0 }.joined(separator: ", "))
   }
 
