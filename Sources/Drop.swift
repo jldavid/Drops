@@ -77,6 +77,8 @@ public struct Drop: ExpressibleByStringLiteral {
     subtitleNumberOfLines = 1
     position = .top
     duration = .recommended
+    backgroundColor = UIColor.secondaryLabel
+    foregroundColor = UIColor.black
     accessibility = .init(message: title)
   }
 
