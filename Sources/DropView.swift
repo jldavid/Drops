@@ -114,6 +114,7 @@ internal final class DropView: UIView {
 
     imageView.image = drop.icon
     imageView.isHidden = drop.icon == nil
+    imageView.tintColor = drop.foregroundColor
 
     button.setImage(drop.action?.icon, for: .normal)
     button.isHidden = drop.action?.icon == nil
